@@ -1,6 +1,10 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
+import Hero from "./hero"
+import "fontsource-montserrat"
+import "fontsource-kaushan-script"
+import "fontsource-roboto"
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -31,6 +35,7 @@ const Layout = ({ isHomePage, children }) => {
           </Link>
         )}
       </header>
+        <Hero />
 
       <main>{children}</main>
 
