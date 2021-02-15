@@ -28,7 +28,17 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `http://mogo.salsa.marketing/graphql`,
+          `http://mogo.salsa.marketing/graphql`
+      },
+    },
+    {
+      resolve: "gatsby-source-wordpress-menus",
+      options: {
+        wordpressUrl: "http://mogo.salsa.marketing",
+        languages: ["en"],
+        enableWpml: true,
+        allowCache: true,
+        maxCacheDurationSeconds: 60 * 60 * 24
       },
     },
 

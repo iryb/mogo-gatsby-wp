@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 
 export default function Hero ({ data }) {
-    console.log(data);
     return (
         <StaticQuery
         query={graphql`
