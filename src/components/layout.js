@@ -28,7 +28,9 @@ const Layout = ({ isHomePage, children }) => {
       <header className="global-header">
         <Menu />
       </header>
-      <Hero />
+      { isHomePage ? (
+         <Hero />
+      ) : ''}
 
       <main>{children}</main>
 

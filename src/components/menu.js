@@ -13,7 +13,9 @@ export default function Menu ({ data }) {
                     slug
                     menuItems {
                       nodes {
+                        id
                         url
+                        label
                       }
                     }
                   }
@@ -25,7 +27,13 @@ export default function Menu ({ data }) {
         render={data => (
 
             <div className="menu">
-                {data.wpMenuItem.menu.node.menuItems.nodes[1].url}
+                {data.wpMenuItem.menu.node.menuItems.nodes.map( item => (
+                    <Link to={item.url} key={item.id}>
+                        {item.label}
+                    </Link>
+                ) )}
+
+                {/*{data.wpMenuItem.menu.node.menuItems.nodes[1].url}*/}
             </div>
         )}
     />)
