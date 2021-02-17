@@ -7,7 +7,7 @@ import "fontsource-montserrat"
 import "fontsource-kaushan-script"
 import "fontsource-roboto"
 
-const Layout = ({ isHomePage, children }) => {
+const Layout = ({ children }) => {
   const {
     wp: {
       generalSettings: { title },
@@ -24,13 +24,10 @@ const Layout = ({ isHomePage, children }) => {
   `)
 
   return (
-    <div className="global-wrapper" data-is-root-path={isHomePage}>
+    <div className="global-wrapper">
       <header className="global-header">
         <Menu />
       </header>
-      { isHomePage ? (
-         <Hero />
-      ) : ''}
 
       <main>{children}</main>
 

@@ -123,11 +123,14 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
           // we want the first page to be "/" and any additional pages
           // to be numbered.
           // "/blog/2" for example
-          return page === 1 ? `/` : `/blog/${page}`
+          return page === 1 ? `/blog/` : `/blog/${page}`
         }
 
         return null
       }
+
+     // const blogPostTemplate = path.resolve(`./src/templates/blog.js`);
+     // const path = node.frontmatter.path;
 
       // createPage is an action passed to createPages
       // See https://www.gatsbyjs.com/docs/actions#createPage for more info
@@ -135,7 +138,7 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
         path: getPagePath(pageNumber),
 
         // use the blog post archive template as the page component
-        component: path.resolve(`./src/templates/blog-post-archive.js`),
+        component: path.resolve(`./src/templates/blog.js`),
 
         // `context` is available in the template as a prop and
         // as a variable in GraphQL.
