@@ -4,6 +4,7 @@ import parse from "html-react-parser"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero";
+import LatestPosts from "../components/latestPosts";
 
 const Index = () => {
 
@@ -11,6 +12,7 @@ const Index = () => {
         <Layout>
             <SEO title="Home page" />
             <Hero />
+            <LatestPosts />
 
         </Layout>
     )

@@ -958,6 +958,7 @@ img{
 
 .posts-card {
   width: 33.33%;
+  padding: 0 10px;
 }
 .posts-container {
   display: flex;

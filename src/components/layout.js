@@ -6,6 +6,7 @@ import Hero from "./hero"
 import "fontsource-montserrat"
 import "fontsource-kaushan-script"
 import "fontsource-roboto"
+import './_settings.scss'
 
 const Layout = ({ children }) => {
   const {

@@ -29,6 +29,13 @@ module.exports = {
         url:
           process.env.WPGRAPHQL_URL ||
           `http://mogo.salsa.marketing/graphql`,
+        includedRoutes: [
+          "/*/*/posts",
+          "/*/*/pages",
+          "/*/*/media",
+          "/*/*/menus",
+          "/*/*/team"
+        ],
       },
     },
     {
@@ -86,5 +93,7 @@ module.exports = {
      * To learn more, visit: https://gatsby.dev/offline
      */
     // `gatsby-plugin-offline`,
+
+    `gatsby-plugin-sass`,
   ],
 }
