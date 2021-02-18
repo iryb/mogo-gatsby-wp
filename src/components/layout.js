@@ -1,14 +1,12 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import parse from "html-react-parser"
 import Menu from "./menu"
-import Hero from "./hero"
 import "fontsource-montserrat"
 import "fontsource-kaushan-script"
 import "fontsource-roboto"
 import './_settings.scss'
 
-const Layout = ({ children }) => {
+const Layout = ({ isHomePage, children }) => {
   const {
     wp: {
       generalSettings: { title },
@@ -25,7 +23,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="global-wrapper">
+    <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="global-header">
         <Menu />
       </header>

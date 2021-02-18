@@ -5,17 +5,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero";
 import LatestPosts from "../components/latestPosts";
+import Team from "../components/team";
 
-const Index = () => {
+const FrontPageTemplate = () => {
 
     return (
-        <Layout>
+        <Layout isHomePage>
             <SEO title="Home page" />
             <Hero />
             <LatestPosts />
+            <Team />
 
         </Layout>
     )
 }
 
-export default Index
+export default FrontPageTemplate

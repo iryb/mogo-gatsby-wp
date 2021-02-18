@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 const PageTemplate = ({ data: {page } }) => {
 
     return (
-        <Layout>
+        <Layout isHomePage={page.isFrontPage}>
             <section className="page-content">
                 <h1 className="page-title">{parse(page.title)}</h1>
                 {!!page.content && (
@@ -27,6 +27,7 @@ export const pageQuery = graphql`
     $id: String!
   ) {
      page: wpPage(id: { eq: $id }) {
+      isFrontPage
       id
       content
       title
